@@ -30,10 +30,10 @@ const Summary = ({ contents, modalContent }) => {
 
   return (
     <div className="summaryWrapper">
-      <h2>{title}</h2>
+      <h2 className="summaryTitle">{title}</h2>
       <img className="summaryImage" src={image} alt={title}></img>
       <table className="summaryTable">
-        <tr>
+        <tr>  
           <td>장소</td>
           <td className="button" colSpan="2" onClick={openModal}>
             {place} ▶
@@ -77,7 +77,9 @@ const Summary = ({ contents, modalContent }) => {
         </tr>
       </table>
       <Modal open={modalOpen} close={closeModal} header={modalTitle}>
-        {modalTexts.map((text)=>(<p>{text}</p>))}
+        {modalTexts.map((text, index) => (
+          <p key={index}>{text}</p>
+        ))}
       </Modal>
     </div>
   );

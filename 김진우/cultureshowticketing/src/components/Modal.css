@@ -29,6 +29,7 @@
   padding: 16px 64px 16px 16px;
   background-color: #f1f1f1;
   font-weight: 700;
+  font-size: 18px;
 }
 
 .modal > section > header button {
@@ -52,4 +53,9 @@
 .modal.openModal {
   display: flex;
   align-items: center;
+}
+
+.button {
+  margin-bottom: 5px;
+  text-decoration: underline;
 }

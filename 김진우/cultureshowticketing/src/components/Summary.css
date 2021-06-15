@@ -29,3 +29,7 @@
 .button:hover {
   cursor: pointer;
 }
+
+.summaryTitle {
+  font-weight: bold;
+}
