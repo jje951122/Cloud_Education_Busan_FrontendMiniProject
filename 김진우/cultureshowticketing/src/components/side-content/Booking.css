@@ -1,0 +1,56 @@
+.container{
+  margin-left: 50px;
+  position: sticky;
+  top: 200px;
+  
+  border: solid 1px;
+  padding: 5px;
+  border-radius: 5%;
+  height: 500px;
+  width: 400px;
+  padding: 20px;
+  
+}
+.content{
+  border-bottom: 3px solid gray;
+  margin-bottom: 20px;
+}
+.ctlbtn{
+  right: 10px;
+  bottom: 10px;
+  float: right;
+}
+.calen{
+  margin-left: 5%;
+  margin-bottom: 1%;
+}
+p{
+  margin-left: 5%;
+}
+.SeatLevel{
+  margin-top: 10px;
+  display: inline-flex;
+}
+.R{
+  width: 25px;
+  height: 25px;
+  background-color: violet;
+}
+.S{
+  width: 25px;
+  height: 25px;
+  background-color: green;
+}
+.A{
+  width: 25px;
+  height: 25px;
+  background-color: skyblue;
+}
+.B{
+  width: 25px;
+  height: 25px;
+  background-color: orange;
+}
+.txt{
+  margin: 0 10px;
+}

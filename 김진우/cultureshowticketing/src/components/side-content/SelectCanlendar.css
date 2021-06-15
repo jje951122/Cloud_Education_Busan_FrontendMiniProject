@@ -1,0 +1,16 @@
+
+Calendar{
+  margin-left: 20px;
+  
+}
+span{
+  width: 10%;
+  height: 20%;
+  background-color: blue;
+}
+.content{
+  margin-left: 20%;
+}
+.calen{
+  margin-left: 10%;
+}

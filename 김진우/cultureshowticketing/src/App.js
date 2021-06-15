@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Summary from "./components/Summary";
 import Detail from "./components/Detail";
+import Booking from "./components/side-content/Booking";
 
 const App = () => {
   const [contents, setContents] = useState({
@@ -134,14 +135,19 @@ const App = () => {
   ]);
 
   return (
-    <section className="container">
-      <Summary contents={contents} modalContent={modalContent}></Summary>
-      <Detail
-        castingCardContents={castingCardContents}
-        concertDetailInformation={concertDetailInformation}
-        componeyInfomation={componeyInfomation}
-      ></Detail>
-    </section>
+    <div className="appContainer">
+      <section>
+        <Summary contents={contents} modalContent={modalContent}></Summary>
+        <Detail
+          castingCardContents={castingCardContents}
+          concertDetailInformation={concertDetailInformation}
+          componeyInfomation={componeyInfomation}
+        ></Detail>
+      </section>
+      <div className="test">
+        <Booking></Booking>
+      </div>
+    </div>
   );
 };
 

@@ -5,10 +5,10 @@ import SeatElement from "./SeatElement";
 const Seat = () => {
   const [canChooseCount, setCanChooseCount] = useState(0);
   const getCanChooseCount = () => canChooseCount;
-  const Numbers = Array.from(Array(37 - 1).keys())
+  const Numbers = Array.from(Array(61 - 1).keys())
     .map((v) => v + 1)
     .map((v) => v);
-
+  
   return (
     <div>
       <h3>좌석현황</h3>
