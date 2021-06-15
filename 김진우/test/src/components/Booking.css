@@ -1,0 +1,23 @@
+.container{
+  border: solid 1px;
+  padding: 5px;
+  border-radius: 5%;
+  height: 500px;
+  width: 400px;
+  padding: 20px;
+}
+.content{
+  border-bottom: 1px solid;
+}
+.ctlbtn{
+  right: 10px;
+  bottom: 10px;
+  float: right;
+}
+.calen{
+  margin-left: 5%;
+  margin-bottom: 1%;
+}
+p{
+  margin-left: 5%;
+}

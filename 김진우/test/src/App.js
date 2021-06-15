@@ -1,12 +1,11 @@
 import React from "react";
 import './App.css';
-import Seat from './components/Seat';
-
+import Booking from './components/Booking'
 function App() {
   return (
-    <div className="container">
-      <Seat></Seat>
-    </div>
+    
+      <Booking></Booking>
+    
   );
 }
 

@@ -11,3 +11,21 @@
   vertical-align: middle;
   color: black;
 }
+.rule{
+  color: red;
+}
+.screen{
+  margin-left: 4%;
+  background-color: gray;
+  color: black;
+  height: 50px;
+  font-size: larger;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.cnt{
+  border-top: solid 1px;
+  border-bottom : solid 1px;
+  text-align: center;
+}
