@@ -1,42 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Seat.css";
-import "antd/dist/antd.css";
-import { Row, Col } from 'antd';
-
-const style = { background: '#0092ff', padding: '2px', textAlign: "center"};
+import SeatElement from "./SeatElement";
 
 const Seat = () => {
-  return (
-    <Row gutter={[10, 10  ]}>
-      <Col className={"gutter-row"} span={3}>
-        <div style={style}>1</div>
-      </Col>
-      <Col className="gutter-row" span={3}>
-        <div style={style}>1</div>
-      </Col>
-      <Col className="gutter-row" span={3}>
-        <div style={style}>1</div>
-      </Col>
-      <Col className="gutter-row" span={3}>
-        <div style={style}>1</div>
-      </Col>
-      <Col className="gutter-row" span={3}>
-        <div style={style}>1</div>
-      </Col>
-      <Col className="gutter-row" span={3}>
-        <div style={style}>1</div>
-      </Col>
-      <Col className="gutter-row" span={3}>
-        <div style={style}>1</div>
-      </Col>
-      <Col className="gutter-row" span={3}>
-        <div style={style}>1</div>
-      </Col>
-      <Col className="gutter-row" span={3}>
-        <div style={style}>1</div>
-      </Col>
+  const [canChooseCount, setCanChooseCount] = useState(3);
+  const getCanChooseCount = () => canChooseCount;
+  const Numbers = Array.from(Array(37 - 1).keys())
+    .map((v) => v + 1)
+    .map((v) => v);
 
-    </Row>
+  return (
+    <div className="container">
+      <div className="row">
+        {Numbers.map((number, index) => (
+          <SeatElement
+            key={index}
+            get={getCanChooseCount}
+            set={setCanChooseCount}
+            number={number}
+          ></SeatElement>
+        ))}
+      </div>
+    </div>
   );
 };
 
