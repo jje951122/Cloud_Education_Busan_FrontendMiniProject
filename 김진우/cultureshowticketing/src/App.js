@@ -125,12 +125,21 @@ const App = () => {
     },
   ]);
 
+  const [componeyInfomation, componeyInfomations] = useState([
+    { content: "제작 : CJ ENM" },
+    { content: "주최 : 예술의전당, CJ ENM" },
+    { content: "마케팅 : ㈜랑" },
+    { content: "홍보 : (주)샘컴퍼니" },
+    { content: "문의 : 오픈리뷰(주) 1588-5212" },
+  ]);
+
   return (
     <section className="container">
       <Summary contents={contents} modalContent={modalContent}></Summary>
       <Detail
         castingCardContents={castingCardContents}
         concertDetailInformation={concertDetailInformation}
+        componeyInfomation={componeyInfomation}
       ></Detail>
     </section>
   );

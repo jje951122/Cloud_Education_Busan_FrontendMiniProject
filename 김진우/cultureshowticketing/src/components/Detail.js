@@ -3,8 +3,13 @@ import "./Detail.css";
 import Casting from "./Casting";
 import "antd/dist/antd.css";
 import { Tabs } from "antd";
+import UserComment from "./UserComment";
 
-const Detail = ({ castingCardContents, concertDetailInformation }) => {
+const Detail = ({
+  castingCardContents,
+  concertDetailInformation,
+  componeyInfomation,
+}) => {
   const { TabPane } = Tabs;
 
   return (
@@ -32,15 +37,13 @@ const Detail = ({ castingCardContents, concertDetailInformation }) => {
           <div className="detailContentTitle">
             <b>기획사 정보</b>
           </div>
-          <p>제작 : CJ ENM</p>
-          <p>주최 : 예술의전당, CJ ENM</p>
-          <p>마케팅 : ㈜랑</p>
-          <p>홍보 : (주)샘컴퍼니</p>
-          <p>문의 : 오픈리뷰(주) 1588-5212</p>
+          {componeyInfomation.map((info) => (
+            <p>{info.content}</p>
+          ))}
           <div className="detailContentTitle">
             <b>티켓 수령 안내</b>
           </div>
-          <p style={{fontWeight: "bold"}}>예약 번호 입장</p>
+          <p style={{ fontWeight: "bold" }}>예약 번호 입장</p>
           <ul>
             <li>
               공연 당일 현장 교부처에서 예약번호 및 본인 확인 후 티켓을 수령하실
@@ -51,7 +54,7 @@ const Detail = ({ castingCardContents, concertDetailInformation }) => {
               편리합니다.
             </li>
           </ul>
-          <p style={{fontWeight: "bold"}}>티켓배송</p>
+          <p style={{ fontWeight: "bold" }}>티켓배송</p>
           <ul>
             <li>
               예매완료(결제익일) 기준 4~5일 이내에 배송됩니다. (주말, 공휴일을
@@ -78,6 +81,21 @@ const Detail = ({ castingCardContents, concertDetailInformation }) => {
               후, 고객센터(1544-1555)로 재배송 신청할 수 있습니다.
             </li>
           </ul>
+        </TabPane>
+        <TabPane tab="기대평" key="4">
+          <div className="detailContentTitle">
+            <b>꼭 읽어주세요</b>
+          </div>
+          <p>
+            게시판 운영 규정에 어긋난다고 판단되는 게시글은 사전 통보없이
+            블라인드 처리될 수 있습니다.
+          </p>
+          <p>
+            특히 티켓 매매 및 양도의 글은 발견 즉시 임의 삭제되며 전화번호,
+            이메일 등의 개인정보는 악용될 우려가 있으므로 게시를 삼가 주시기
+            바랍니다.
+          </p>
+          <UserComment></UserComment>
         </TabPane>
       </Tabs>
     </div>
