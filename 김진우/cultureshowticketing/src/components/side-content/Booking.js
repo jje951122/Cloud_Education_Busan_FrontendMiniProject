@@ -18,12 +18,16 @@ const Booking = () => {
     return (
       <div className="container">
         <div>
-          <SelectCalendar style={{border:'none'}} func={ChangeDate} />
+          <SelectCalendar func={ChangeDate} />
         </div>
 
         <div className="content">
-          <h3>캐스팅</h3>
-          <p>윤도현, 엄기준, 차지연 ...</p>
+          <h3>관람 시간</h3>
+          <div className="time">
+            <input type="radio" name="select_time"></input> 1회 13:00
+            <br />
+            <input type="radio" name="select_time"></input> 2회 18:00
+          </div>
         </div>
 
         <button className="ctlbtn" onClick={() => setValue(false)}>

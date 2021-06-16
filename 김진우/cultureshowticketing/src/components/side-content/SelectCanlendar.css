@@ -1,16 +1,14 @@
-
-Calendar{
+Calendar {
   margin-left: 20px;
-  
 }
-span{
+span {
   width: 10%;
   height: 20%;
   background-color: blue;
 }
-.content{
+.content {
   margin-left: 20%;
 }
-.calen{
+.calen {
   margin-left: 10%;
 }

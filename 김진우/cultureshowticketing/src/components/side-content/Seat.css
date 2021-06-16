@@ -19,12 +19,13 @@
   margin-left: 1%;
   margin-right: 1%;
   background-color: black;
-  color: black;
+  color: white;
   height: 50px;
   font-size: larger;
   text-align: center;
   margin-bottom: 10px;
   margin-top: 20px;
+  line-height: 50px;
 }
 
 .cnt {

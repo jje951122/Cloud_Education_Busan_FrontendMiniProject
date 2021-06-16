@@ -8,7 +8,7 @@ const Seat = () => {
   const Numbers = Array.from(Array(61 - 1).keys())
     .map((v) => v + 1)
     .map((v) => v);
-  
+
   return (
     <div>
       <h3>좌석현황</h3>
@@ -42,17 +42,7 @@ const Seat = () => {
               get={getCanChooseCount}
               set={setCanChooseCount}
               number={number}
-              color={
-                number <= 10
-                  ? "purple"
-                  : number <= 20
-                  ? "green"
-                  : number <= 30
-                  ? "skyblue"
-                  : number <= 60
-                  ? "orange"
-                  : "None"
-              }
+              constNumber={number}
             ></SeatElement>
           ))}
         </div>

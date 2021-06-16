@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SeatElement.css";
 
-const SeatElement = ({ get, set, number, color }) => {
+const SeatElement = ({ get, set, number, constNumber }) => {
   const [checked, setChecked] = useState(false);
 
   const onClick = (e) => {
@@ -21,8 +21,19 @@ const SeatElement = ({ get, set, number, color }) => {
 
   return (
     <div
-      style={{ backgroundColor: color }}
-      className={checked ? "box checked" : "box unchecked"}
+      className={
+        checked
+          ? "box checked"
+          : number <= 10
+          ? "box R"
+          : number <= 20
+          ? "box S"
+          : number <= 30
+          ? "box A"
+          : number <= 60
+          ? "box B"
+          : "box None"
+      }
       onClick={onClick}
     >
       {number}
