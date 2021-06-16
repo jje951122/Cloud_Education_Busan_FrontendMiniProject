@@ -20,7 +20,9 @@ const Detail = ({
             <b>공연시간 정보</b>
           </div>
           {concertDetailInformation.map((info, index) => (
-            <p key={index}>{info.content}</p>
+            <p className="infoText" key={index}>
+              {info.content}
+            </p>
           ))}
           <h2 className="detailContentTitle">
             <b>공연상세 / 캐스팅일정</b>
@@ -38,7 +40,9 @@ const Detail = ({
             <b>기획사 정보</b>
           </div>
           {componeyInfomation.map((info, index) => (
-            <p key={index}>{info.content}</p>
+            <p className="infoText" key={index}>
+              {info.content}
+            </p>
           ))}
           <div className="detailContentTitle">
             <b>티켓 수령 안내</b>
@@ -86,15 +90,15 @@ const Detail = ({
           <div className="detailContentTitle">
             <b>꼭 읽어주세요</b>
           </div>
-          <p>
+          <div>
             게시판 운영 규정에 어긋난다고 판단되는 게시글은 사전 통보없이
             블라인드 처리될 수 있습니다.
-          </p>
-          <p>
+          </div>
+          <div>
             특히 티켓 매매 및 양도의 글은 발견 즉시 임의 삭제되며 전화번호,
             이메일 등의 개인정보는 악용될 우려가 있으므로 게시를 삼가 주시기
             바랍니다.
-          </p>
+          </div>
           <UserComment></UserComment>
         </TabPane>
       </Tabs>
