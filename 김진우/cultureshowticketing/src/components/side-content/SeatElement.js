@@ -8,12 +8,10 @@ const SeatElement = ({ get, set, number }) => {
     if (checked) {
       setChecked(!checked);
       set(get() + 1);
-      console.log("unchecked : " + number);
     } else {
       if (get() > 0) {
         setChecked(!checked);
         set(get() - 1);
-        console.log("checked : " + number);
       }
     }
     

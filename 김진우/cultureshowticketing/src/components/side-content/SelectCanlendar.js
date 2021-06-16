@@ -7,14 +7,12 @@ const SelectCalendar = ({ data , func }) => {
 
   const onDateChange = (date) => {
     setValue(date)
-    console.log(date);
     func(date);
   };
   return (
     <div className="Calendar_container">
       <div className="content">
         <h3>관람일</h3>
-        {/* <text>{moment(value).format("YYYY-MM-DD")}</text> */}
         <div className="calen">
           <Calendar onChange={onDateChange} value={value.date} defaultValue={new Date()}/>
         </div>

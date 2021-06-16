@@ -1,17 +1,16 @@
-import moment from "moment";
 import React, { useState } from "react";
 import "react-calendar/dist/Calendar.css";
 import SelectCalendar from "./SelectCanlendar";
 import Seat from "./Seat";
 import "./Booking.css";
-var date = new Date();
+// import moment from "moment";
+// var date = new Date();
 
 const Booking = () => {
   const [value, setValue] = useState(true);
 
   const ChangeDate = (value) => {
-    date = moment(value).format("YYYY-MM-DD");
-    console.log(value);
+    // date = moment(value).format("YYYY-MM-DD");
   };
 
   if (value) {
@@ -24,10 +23,10 @@ const Booking = () => {
         <div className="content">
           <h3>관람 시간</h3>
           <div className="time">
-            <input type="radio" name="select_time" checked="checked"></input>{" "}
+            <input type="radio" name="select_time" checked="checked" readOnly></input>{" "}
             1회 13:00
             <br />
-            <input type="radio" name="select_time"></input> 2회 18:00
+            <input type="radio" name="select_time" readOnly></input> 2회 18:00
           </div>
         </div>
 
@@ -37,7 +36,6 @@ const Booking = () => {
       </div>
     );
   } else {
-    console.log(date);
     return (
       <div className="container">
         <Seat />

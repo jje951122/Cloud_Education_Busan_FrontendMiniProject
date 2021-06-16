@@ -22,7 +22,7 @@ const Seat = () => {
         >
           +
         </button>
-        <text> {canChooseCount} </text>
+        <span> {canChooseCount} </span>
         <button
           id="count"
           onClick={() =>

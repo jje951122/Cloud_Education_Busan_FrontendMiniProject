@@ -19,8 +19,8 @@ const Detail = ({
           <div className="detailContentTitle">
             <b>공연시간 정보</b>
           </div>
-          {concertDetailInformation.map((info) => (
-            <p>{info.content}</p>
+          {concertDetailInformation.map((info, index) => (
+            <p key={index}>{info.content}</p>
           ))}
           <h2 className="detailContentTitle">
             <b>공연상세 / 캐스팅일정</b>
@@ -37,8 +37,8 @@ const Detail = ({
           <div className="detailContentTitle">
             <b>기획사 정보</b>
           </div>
-          {componeyInfomation.map((info) => (
-            <p>{info.content}</p>
+          {componeyInfomation.map((info, index) => (
+            <p key={index}>{info.content}</p>
           ))}
           <div className="detailContentTitle">
             <b>티켓 수령 안내</b>

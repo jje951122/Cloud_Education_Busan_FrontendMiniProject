@@ -6,7 +6,7 @@ import Booking from "./components/side-content/Booking";
 import Footer from "./components/Footer";
 
 const App = () => {
-  const [contents, setContents] = useState({
+  const [contents] = useState({
     title: "2021 뮤지컬 〈광화문 연가〉",
     image:
       "https://ticketimage.interpark.com/Play/image/large/21/21004339_p.gif",
@@ -21,7 +21,7 @@ const App = () => {
     bPrice: "60,000원",
   });
 
-  const [modalContent, setModalContent] = useState({
+  const [modalContent] = useState({
     modalTitle: "공연장 정보",
     modalTexts: [
       "예술의전당",
@@ -31,7 +31,7 @@ const App = () => {
     ],
   });
 
-  const [castingCardContents, setCastingCardContents] = useState([
+  const [castingCardContents] = useState([
     {
       playName: "명우",
       realName: "윤도현",
@@ -106,7 +106,7 @@ const App = () => {
     },
   ]);
 
-  const [concertDetailInformation, setConcertDetailInformation] = useState([
+  const [concertDetailInformation] = useState([
     { content: "예매가능시간: 관람 1시간전" },
     {
       content:
@@ -127,7 +127,7 @@ const App = () => {
     },
   ]);
 
-  const [componeyInfomation, componeyInfomations] = useState([
+  const [componeyInfomation] = useState([
     { content: "제작 : CJ ENM" },
     { content: "주최 : 예술의전당, CJ ENM" },
     { content: "마케팅 : ㈜랑" },
@@ -150,17 +150,17 @@ const App = () => {
           <Booking></Booking>
         </section>
         <div>
-          <a href="#" className="topbutton">
+          <a href="/#" className="topbutton">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"
               height="30"
               fill="currentColor"
-              class="bi bi-arrow-bar-up"
+              className="bi bi-arrow-bar-up"
               viewBox="0 0 16 16"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"
               />
             </svg>
