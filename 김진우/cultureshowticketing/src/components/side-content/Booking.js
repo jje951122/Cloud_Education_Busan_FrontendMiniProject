@@ -24,7 +24,8 @@ const Booking = () => {
         <div className="content">
           <h3>관람 시간</h3>
           <div className="time">
-            <input type="radio" name="select_time"></input> 1회 13:00
+            <input type="radio" name="select_time" checked="checked"></input>{" "}
+            1회 13:00
             <br />
             <input type="radio" name="select_time"></input> 2회 18:00
           </div>
@@ -55,7 +56,7 @@ const Booking = () => {
           <button
             className="ctlbtn"
             onClick={() => {
-              alert(date);
+              alert("예매가 완료되었습니다!");
               setValue(true);
             }}
           >

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SeatElement.css";
 
-const SeatElement = ({ get, set, number, constNumber }) => {
+const SeatElement = ({ get, set, number }) => {
   const [checked, setChecked] = useState(false);
 
   const onClick = (e) => {

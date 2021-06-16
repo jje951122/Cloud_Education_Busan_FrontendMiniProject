@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import moment from "moment";
 
 const SelectCalendar = ({ data , func }) => {
   const [value, setValue] = useState(new Date());
@@ -13,11 +12,11 @@ const SelectCalendar = ({ data , func }) => {
   };
   return (
     <div className="Calendar_container">
-      <div className='content'>
+      <div className="content">
         <h3>관람일</h3>
         {/* <text>{moment(value).format("YYYY-MM-DD")}</text> */}
         <div className="calen">
-          <Calendar onChange={onDateChange} value={value.date} />
+          <Calendar onChange={onDateChange} value={value.date} defaultValue={new Date()}/>
         </div>
       </div>
     </div>

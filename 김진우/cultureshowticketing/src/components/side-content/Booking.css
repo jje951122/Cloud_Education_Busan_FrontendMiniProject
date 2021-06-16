@@ -13,7 +13,7 @@
 }
 .content{
   border-bottom: 3px solid gray;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .ctlbtn{
   right: 10px;
@@ -22,9 +22,6 @@
 }
 .calen{
   margin-bottom: 1%;
-}
-p{
-  margin-left: 5%;
 }
 .SeatLevel{
   margin-top: 10px;

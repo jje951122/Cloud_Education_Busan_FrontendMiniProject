@@ -3,6 +3,7 @@ import "./App.css";
 import Summary from "./components/Summary";
 import Detail from "./components/Detail";
 import Booking from "./components/side-content/Booking";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [contents, setContents] = useState({
@@ -135,18 +136,23 @@ const App = () => {
   ]);
 
   return (
-    <div className="appContainer">
-      <section>
-        <Summary contents={contents} modalContent={modalContent}></Summary>
-        <Detail
-          castingCardContents={castingCardContents}
-          concertDetailInformation={concertDetailInformation}
-          componeyInfomation={componeyInfomation}
-        ></Detail>
-      </section>
-      <div className="test">
-        <Booking></Booking>
+    <div>
+      <div className="appContainer">
+        <section>
+          <Summary contents={contents} modalContent={modalContent}></Summary>
+          <Detail
+            castingCardContents={castingCardContents}
+            concertDetailInformation={concertDetailInformation}
+            componeyInfomation={componeyInfomation}
+          ></Detail>
+        </section>
+        <section>
+          <Booking></Booking>
+        </section>
       </div>
+      <footer style={{display: "block"}}>
+        <Footer></Footer>
+      </footer>
     </div>
   );
 };

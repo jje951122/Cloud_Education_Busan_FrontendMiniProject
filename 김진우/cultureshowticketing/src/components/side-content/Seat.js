@@ -13,7 +13,7 @@ const Seat = () => {
     <div>
       <h3>좌석현황</h3>
       <div className="cnt">
-        <span>총 인원 </span>
+        <span>남은 선택 가능 인원 </span>
         <button
           id="count"
           onClick={() =>
@@ -42,7 +42,6 @@ const Seat = () => {
               get={getCanChooseCount}
               set={setCanChooseCount}
               number={number}
-              constNumber={number}
             ></SeatElement>
           ))}
         </div>
