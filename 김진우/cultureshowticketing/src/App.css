@@ -4,3 +4,19 @@
   display: flex;
   width: 1280px;
 }
+.topbutton{
+  padding: 1%;
+  text-align: center;
+  position: absolute;
+  right: 10%;
+  display: block;
+  width: 54px;
+  height: 52px;
+    /* background-color: #fff; */
+  border: 1px solid #e1e4e9;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 990px;
+  color: black;
+}
