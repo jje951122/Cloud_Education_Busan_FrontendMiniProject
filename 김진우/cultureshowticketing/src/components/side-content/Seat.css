@@ -11,12 +11,14 @@
   vertical-align: middle;
   color: black;
 }
-.rule{
+.rule {
   color: red;
 }
-.screen{
-  margin-left: 4%;
-  background-color: gray;
+.screen {
+  width: 95%;
+  margin-left: 1%;
+  margin-right: 1%;
+  background-color: black;
   color: black;
   height: 50px;
   font-size: larger;
@@ -25,12 +27,12 @@
   margin-top: 20px;
 }
 
-.cnt{
+.cnt {
   border-top: solid 1px;
-  border-bottom : solid 1px;
+  border-bottom: solid 1px;
   text-align: center;
 }
-.row{
+.row {
   margin-top: 20px;
   border-bottom: 1px solid;
 }

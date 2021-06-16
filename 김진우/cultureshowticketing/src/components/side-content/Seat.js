@@ -42,6 +42,17 @@ const Seat = () => {
               get={getCanChooseCount}
               set={setCanChooseCount}
               number={number}
+              color={
+                number <= 10
+                  ? "purple"
+                  : number <= 20
+                  ? "green"
+                  : number <= 30
+                  ? "skyblue"
+                  : number <= 60
+                  ? "orange"
+                  : "None"
+              }
             ></SeatElement>
           ))}
         </div>
