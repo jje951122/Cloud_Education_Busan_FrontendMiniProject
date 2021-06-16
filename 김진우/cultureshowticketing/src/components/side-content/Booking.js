@@ -3,6 +3,7 @@ import "react-calendar/dist/Calendar.css";
 import SelectCalendar from "./SelectCanlendar";
 import Seat from "./Seat";
 import "./Booking.css";
+import { Radio } from "antd";
 // import moment from "moment";
 // var date = new Date();
 
@@ -12,6 +13,9 @@ const Booking = () => {
   const ChangeDate = (value) => {
     // date = moment(value).format("YYYY-MM-DD");
   };
+  function onChange(e) {
+    console.log(`radio checked:${e.target.value}`);
+  }
 
   if (value) {
     return (
@@ -23,10 +27,11 @@ const Booking = () => {
         <div className="content">
           <h3>관람 시간</h3>
           <div className="time">
-            <input type="radio" name="select_time" checked="checked" readOnly></input>{" "}
-            1회 13:00
-            <br />
-            <input type="radio" name="select_time" readOnly></input> 2회 18:00
+            <Radio.Group onChange={onChange} defaultValue="a">
+              <Radio.Button value="a">1회 10:00</Radio.Button>
+              <Radio.Button value="b">2회 14:00</Radio.Button>
+              <Radio.Button value="c">3회 18:00</Radio.Button>
+            </Radio.Group>
           </div>
         </div>
 
