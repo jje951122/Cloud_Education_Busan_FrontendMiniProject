@@ -21,3 +21,19 @@
   top: 90%;
   color: black;
 }
+
+.logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 32px 16px -24px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+ul > li {
+  line-height: 64px;
+}
+
+.headerContainer {
+  margin-bottom: 50px;
+}

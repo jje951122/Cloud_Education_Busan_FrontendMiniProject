@@ -4,6 +4,8 @@ import Summary from "./components/Summary";
 import Detail from "./components/Detail";
 import Booking from "./components/side-content/Booking";
 import Footer from "./components/Footer";
+import { Layout, Menu, Breadcrumb } from "antd";
+const { Header, Content } = Layout;
 
 const App = () => {
   const [contents] = useState({
@@ -137,19 +139,30 @@ const App = () => {
 
   return (
     <div>
-      <div className="appContainer">
-        <section>
+      <header className="headerContainer">
+        <Header className="header">
+          <div className="logo" ></div>
+          <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
+            <Menu.Item key="1">뮤지컬</Menu.Item>
+            <Menu.Item key="2">콘서트</Menu.Item>
+            <Menu.Item key="3">연극</Menu.Item>
+          </Menu>
+        </Header>
+      </header>
+
+      <dsection className="appContainer">
+        <article>
           <Summary contents={contents} modalContent={modalContent}></Summary>
           <Detail
             castingCardContents={castingCardContents}
             concertDetailInformation={concertDetailInformation}
             componeyInfomation={componeyInfomation}
           ></Detail>
-        </section>
-        <section>
+        </article>
+        <article>
           <Booking></Booking>
-        </section>
-        <div>
+        </article>
+        <article>
           <a href="/#" className="topbutton">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -165,8 +178,8 @@ const App = () => {
               />
             </svg>
           </a>
-        </div>
-      </div>
+        </article>
+      </dsection>
 
       <footer style={{ display: "block" }}>
         <Footer></Footer>
