@@ -1,5 +1,6 @@
 import React from "react";
 import "./Modal.css";
+import "./Navbar.css"
 
 const Modal = (props) => {
   const { open, close, header } = props;

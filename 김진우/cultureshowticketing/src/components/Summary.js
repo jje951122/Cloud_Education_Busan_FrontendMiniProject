@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Summary.css";
 import Modal from "./Modal";
 
-const Summary = ({ contents, modalContent }) => {
+const Summary = ({ contents }) => {
   const {
     title,
     image,
@@ -16,8 +16,6 @@ const Summary = ({ contents, modalContent }) => {
     aPrice,
     bPrice,
   } = contents;
-
-  const { modalTitle, modalTexts } = modalContent;
 
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -78,10 +76,11 @@ const Summary = ({ contents, modalContent }) => {
           </tr>
         </tbody>
       </table>
-      <Modal open={modalOpen} close={closeModal} header={modalTitle}>
-        {modalTexts.map((text, index) => (
-          <p key={index}>{text}</p>
-        ))}
+      <Modal open={modalOpen} close={closeModal} header="공연장 정보">
+        <p>예술의전당</p>
+        <p>전화번호 : 02-580-1300</p>
+        <p>도로명 주소: 서울시 서초구 남부순환로 2406 예술의전당</p>
+        <p>지번 주소: 서울시 서초구 서초동 700번지</p>
       </Modal>
     </div>
   );
