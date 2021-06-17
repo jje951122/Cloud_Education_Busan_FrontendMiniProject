@@ -1,5 +1,5 @@
 import React from "react";
-import "./MainLeftSider";
+import "./MainLeftSider.scss";
 import img1 from "./images/img1.png";
 
 const MainLeftSider = () => {
