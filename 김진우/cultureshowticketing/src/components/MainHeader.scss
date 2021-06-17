@@ -37,8 +37,13 @@
 
     }
 
-    .hidden {
-        width: 70%;
+    .hidden1 {
+        width: 45%;
+        visibility: hidden;
+    }
+
+    .hidden2 {
+        width: 25%;
         visibility: hidden;
     }
 }

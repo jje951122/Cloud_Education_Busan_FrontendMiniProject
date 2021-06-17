@@ -7,12 +7,12 @@ const { Header, Content } = Layout;
 const MainHeader = () => {
   return (
     <div className="main_head_wrap">
-      <div className="logo"></div>
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
+        <Menu.Item className="hidden1"></Menu.Item>
         <Menu.Item key="1">뮤지컬</Menu.Item>
         <Menu.Item key="2">콘서트</Menu.Item>
         <Menu.Item key="3">연극</Menu.Item>
-        <Menu.Item className="hidden"></Menu.Item>
+        <Menu.Item className="hidden2"></Menu.Item>
         <Menu.Item className="search ">
           <div className="display">
             <input className="display" type="text"></input>

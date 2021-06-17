@@ -2,7 +2,6 @@
     display: block;
     width: auto;
     height: auto;
-    margin-left: 10%;
     margin-left: 5%;
     margin-right: 5%;
     text-align: center;
@@ -52,10 +51,14 @@
         /* 설명글이 위로 200px 이동하게 */
     }
 
-    .contents_list .caption h2,
+    .contents_list .caption h2 {
+        color: #fff;
+        text-align: center;
+    }
+
     .contents_list .caption p {
         color: #fff;
         text-align: center;
-        font-size: xx-small;
+        font-size: large;
     }
 }

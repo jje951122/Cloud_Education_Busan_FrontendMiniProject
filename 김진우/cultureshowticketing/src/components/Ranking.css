@@ -1,6 +1,5 @@
 ul {
   list-style-type: none;
-
   padding: 1px;
 }
 
@@ -8,15 +7,14 @@ li {
   color: white;
   text-align: center;
   border-top: 1px solid black;
-  border-bottom: 1px solid black;
   margin-bottom: 1px;
 }
 
 .title {
   text-align: center;
-  border-bottom: 1px solid black;
   font-size: 200%;
   font-weight: 1000;
+  margin-top: 15px;
 }
 
 .list {
@@ -28,6 +26,8 @@ li {
 .contents {
   background-color: white;
   font-size: 1rem;
+  border: 1px solid black;
+  margin-bottom: 30px;
 }
 
 li a {

@@ -1,13 +1,11 @@
 import React from "react";
 import "./MainTemplate.scss";
 import MainHeader from "./MainHeader";
-import MainNavbar from "./MainNavbar";
 import MainContentsList from "./MainContentsList";
 import Ranking from "./Ranking";
 import SimpleSlider from "./SimpleSlider";
 import MainLeftSider from "./MainLeftSider";
 import Category from "./Category";
-import Header from "./Header";
 
 const MainTemplate = () => {
   return (

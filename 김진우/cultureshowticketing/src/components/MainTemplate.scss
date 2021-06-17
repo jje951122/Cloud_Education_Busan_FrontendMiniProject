@@ -48,6 +48,7 @@
     height: auto;
     /* 본문의 높이 */
     margin-top: 50px;
+    margin-bottom: 100px;
     background-color: white;
     float: left;
     /* 왼쪽으로 플로팅 */
@@ -67,9 +68,6 @@
 #footer {
     width: 100%;
     /* 부모 요소의 너비와 똑같게  */
-    height: 100px;
-    /* 푸터의 높이 */
-    background-color: #001529;
     clear: left;
     /* 플로팅 해제 */
 }
