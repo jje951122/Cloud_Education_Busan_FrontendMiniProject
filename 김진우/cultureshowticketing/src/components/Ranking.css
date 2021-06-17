@@ -1,9 +1,10 @@
 ul {
   list-style-type: none;
   padding: 1px;
+  margin-bottom: 0px !important;
 }
 
-li {
+ul > li {
   color: white;
   text-align: center;
   border-top: 1px solid black;

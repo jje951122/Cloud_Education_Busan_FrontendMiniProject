@@ -36,7 +36,7 @@ const Booking = () => {
         </div>
 
         <button className="ctlbtn" onClick={() => setValue(false)}>
-          다음
+          &nbsp;&nbsp;다음&nbsp;&nbsp;
         </button>
       </div>
     );
@@ -63,10 +63,10 @@ const Booking = () => {
               setValue(true);
             }}
           >
-            결제
+            &nbsp;&nbsp;결제&nbsp;&nbsp;
           </button>
           <button className="ctlbtn" onClick={() => setValue(true)}>
-            이전
+            &nbsp;&nbsp;이전&nbsp;&nbsp;
           </button>
         </div>
       </div>

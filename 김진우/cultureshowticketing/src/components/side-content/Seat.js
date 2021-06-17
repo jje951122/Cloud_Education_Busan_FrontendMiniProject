@@ -20,7 +20,7 @@ const Seat = () => {
             canChooseCount !== 4 ? setCanChooseCount(canChooseCount + 1) : null
           }
         >
-          +
+          &nbsp;&nbsp;+&nbsp;&nbsp;
         </button>
         <span> {canChooseCount} </span>
         <button
@@ -29,7 +29,7 @@ const Seat = () => {
             canChooseCount !== 0 ? setCanChooseCount(canChooseCount - 1) : null
           }
         >
-          -
+          &nbsp;&nbsp;-&nbsp;&nbsp;
         </button>
         <span className="rule"> &nbsp;&nbsp;*최대 4명 선택가능</span>
       </div>
