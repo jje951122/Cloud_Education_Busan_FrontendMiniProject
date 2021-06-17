@@ -1,32 +1,106 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Summary from "./components/Summary";
+import Detail from "./components/Detail";
+import Booking from "./components/side-content/Booking";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import axios from "axios";
 
 const App = () => {
-  const [contents, setContents] = useState({
-    title: "2021 뮤지컬 〈광화문 연가〉",
-    image:
-      "https://ticketimage.interpark.com/Play/image/large/21/21004339_p.gif",
-    place: "예술의전당 오페라극장",
-    period: "2021.07.16 ~2021.09.05",
-    time: "160분(인터미션 20분)",
-    age: "8세이상 관람가능",
-    mainPrice: "30,000원~150,000원",
-    rPrice: "150,000원",
-    sPrice: "120,000원",
-    aPrice: "90,000원",
-    bPrice: "60,000원",
-  });
+  const [contents, setContents] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://42202055-2b37-4042-a35a-98cc35d44093.mock.pstmn.io/content")
+      .then((result) => {
+        setContents(result.data);
+      })
+      .catch((error) => console.error("에러 발생 : ", error));
+  }, []);
 
-  const [modalContent, setModalContent] = useState({
-    modalTitle: "공연장 정보",
-    modalTexts:
-      ["예술의전당", "전화번호 : 02-580-1300", "주소 : 서울특별시 서초구 서초동 700번지", "홈페이지 : http://www.sac.or.kr"],
-  });
+  const [concertDetailInformation, setConcertDetailInformation] = useState([]);
+  useEffect(() => {
+    axios
+      .get(
+        "https://42202055-2b37-4042-a35a-98cc35d44093.mock.pstmn.io/detailInformation"
+      )
+      .then((result) => {
+        setConcertDetailInformation(result.data);
+      })
+      .catch((error) => console.error("에러 발생 : ", error));
+  }, []);
 
+  const [castingCardContents, setCastingCardContents] = useState([]);
+  useEffect(() => {
+    axios
+      .get(
+        "https://42202055-2b37-4042-a35a-98cc35d44093.mock.pstmn.io/cardContents"
+      )
+      .then((result) => {
+        setCastingCardContents(result.data);
+      })
+      .catch((error) => console.error("에러 발생 : ", error));
+  }, []);
+
+  const [componeyInfomation, setComponeyInfomation] = useState([]);
+  useEffect(() => {
+    axios
+      .get(
+        "https://42202055-2b37-4042-a35a-98cc35d44093.mock.pstmn.io/companyInformation"
+      )
+      .then((result) => {
+        setComponeyInfomation(result.data);
+      })
+      .catch((error) => console.error("에러 발생 : ", error));
+  }, []);
+
+  if (
+    contents === null ||
+    componeyInfomation === null ||
+    concertDetailInformation === null ||
+    castingCardContents == null
+  ) {
+    return <h1>웹서버로 부터 정보를 받고 있습니다...</h1>;
+  }
   return (
-    <div className="container">
-      <Summary contents={contents} modalContent={modalContent}></Summary>
+    <div>
+      <header className="headerContainer">
+        <Navbar></Navbar>
+      </header>
+      <section className="appContainer">
+        <article>
+          <Summary contents={contents}></Summary>
+          <Detail
+            castingCardContents={castingCardContents}
+            concertDetailInformation={concertDetailInformation}
+            componeyInfomation={componeyInfomation}
+          ></Detail>
+        </article>
+        <article>
+          <Booking></Booking>
+        </article>
+        <div>
+          <a href="/#" className="topbutton">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              className="bi bi-arrow-bar-up"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <footer style={{ display: "block" }}>
+        <Footer></Footer>
+      </footer>
     </div>
   );
 };

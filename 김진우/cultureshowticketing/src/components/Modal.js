@@ -1,5 +1,6 @@
 import React from "react";
 import "./Modal.css";
+import "./Navbar.css"
 
 const Modal = (props) => {
   const { open, close, header } = props;
@@ -10,10 +11,7 @@ const Modal = (props) => {
         <section>
           <header>
             {header}
-            <button onClick={close}>
-              {" "}
-              &times;{" "}
-            </button>
+            <div className="button"><button onClick={close}>&times;</button></div>
           </header>
           <main>{props.children}</main>
         </section>
