@@ -6,6 +6,9 @@ import Booking from "./components/side-content/Booking";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import axios from "axios";
+import { withRouter } from 'react-router-dom';
+import MainHeader from "./components/MainHeader";
+import { Link } from "react-router-dom";
 
 const App = () => {
   const [contents, setContents] = useState([]);
@@ -65,7 +68,7 @@ const App = () => {
   return (
     <div>
       <header className="headerContainer">
-        <Navbar></Navbar>
+        <MainHeader></MainHeader>
       </header>
       <section className="appContainer">
         <article>
@@ -80,7 +83,7 @@ const App = () => {
           <Booking></Booking>
         </article>
         <div>
-          <a href="/#" className="topbutton">
+          <a href="#" className="topbutton">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"

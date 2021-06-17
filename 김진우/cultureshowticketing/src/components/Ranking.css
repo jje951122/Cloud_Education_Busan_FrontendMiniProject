@@ -1,0 +1,47 @@
+ul {
+  list-style-type: none;
+
+  padding: 1px;
+}
+
+li {
+  color: white;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin-bottom: 1px;
+}
+
+.title {
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-size: 200%;
+  font-weight: 1000;
+}
+
+.list {
+  width: 80%;
+  position: sticky;
+
+}
+
+.contents {
+  background-color: white;
+  font-size: 1rem;
+}
+
+li a {
+  text-decoration: none;
+  display: block;
+  color: #000;
+}
+
+li a:hover {
+  background-color: rgba(200, 200, 200, 0.3);
+  color: skyblue;
+}
+
+li a img {
+  display: hidden;
+
+}
