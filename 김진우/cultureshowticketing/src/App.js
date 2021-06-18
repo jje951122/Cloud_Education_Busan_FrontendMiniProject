@@ -6,7 +6,7 @@ import Booking from "./components/side-content/Booking";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import axios from "axios";
-import { withRouter } from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 import MainHeader from "./components/MainHeader";
 import { Link } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const App = () => {
   const [contents, setContents] = useState([]);
   useEffect(() => {
     axios
-      .get("https://42202055-2b37-4042-a35a-98cc35d44093.mock.pstmn.io/content")
+      .get("https://6ad20fe1-7b83-4bd2-abc6-aa156861cd11.mock.pstmn.io/content")
       .then((result) => {
         setContents(result.data);
       })
@@ -25,7 +25,7 @@ const App = () => {
   useEffect(() => {
     axios
       .get(
-        "https://42202055-2b37-4042-a35a-98cc35d44093.mock.pstmn.io/detailInformation"
+        "https://6ad20fe1-7b83-4bd2-abc6-aa156861cd11.mock.pstmn.io/detailInformation"
       )
       .then((result) => {
         setConcertDetailInformation(result.data);
@@ -37,7 +37,7 @@ const App = () => {
   useEffect(() => {
     axios
       .get(
-        "https://42202055-2b37-4042-a35a-98cc35d44093.mock.pstmn.io/cardContents"
+        "https://6ad20fe1-7b83-4bd2-abc6-aa156861cd11.mock.pstmn.io/cardContents"
       )
       .then((result) => {
         setCastingCardContents(result.data);
@@ -49,7 +49,7 @@ const App = () => {
   useEffect(() => {
     axios
       .get(
-        "https://42202055-2b37-4042-a35a-98cc35d44093.mock.pstmn.io/companyInformation"
+        "https://6ad20fe1-7b83-4bd2-abc6-aa156861cd11.mock.pstmn.io/companyInformation"
       )
       .then((result) => {
         setComponeyInfomation(result.data);
